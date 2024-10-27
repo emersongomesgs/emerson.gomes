@@ -60,11 +60,18 @@
     <img src="https://github.com/emersongomesgs/emerson.gomes/raw/main/Image%20(2).jpg" alt="Buquê de Flores" class="flower-bouquet">
     <h1>Você aceita passear comigo?</h1>
     <div class="buttons">
-        <button onclick="alert('Que ótimo! Vamos passear!')">Sim</button>
+        <button onclick="openWhatsApp()">Sim</button>
         <button id="no-button">Não</button>
     </div>
 
     <script>
+        function openWhatsApp() {
+            const phone = "5574991105094";
+            const message = "Oi! Qual é o melhor dia para você para sairmos?";
+            const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+            window.location.href = url;
+        }
+
         const music = document.getElementById("background-music");
         const bouquet = document.querySelector(".flower-bouquet");
         const message = document.querySelector("h1");
@@ -79,6 +86,7 @@
     </script>
 </body>
 </html>
+
 
 
 
