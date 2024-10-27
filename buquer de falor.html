@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite Especial</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ff69b4;
+            font-size: 2.5em;
+            display: none;
+        }
+
+        .flower-bouquet {
+            animation: float 2s ease-in-out infinite;
+            width: 150px;
+            height: auto;
+            display: none;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .buttons {
+            margin-top: 20px;
+            display: none;
+        }
+
+        button {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        #no-button {
+            color: grey;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <audio id="background-music" autoplay loop>
+        <source src="https://github.com/emersongomesgs/emerson.gomes/raw/main/1111.mp3.mp3" type="audio/mpeg">
+    </audio>
+
+    <img src="URL_DA_IMAGEM_DO_BUQUE.png" alt="Buquê de Flores" class="flower-bouquet">
+    <h1>Você aceita sair comigo?</h1>
+    <div class="buttons">
+        <button onclick="alert('Que ótimo! Vamos sair!')">Sim</button>
+        <button id="no-button">Não</button>
+    </div>
+
+    <script>
+        const music = document.getElementById("background-music");
+        const bouquet = document.querySelector(".flower-bouquet");
+        const message = document.querySelector("h1");
+        const buttons = document.querySelector(".buttons");
+
+        // Mostra a mensagem e os botões com o buquê
+        setTimeout(() => {
+            bouquet.style.display = "block"; // Mostra o buquê
+            message.style.display = "block"; // Mostra a mensagem
+            buttons.style.display = "flex";  // Mostra os botões
+        }, 3000); // Atraso de 3 segundos antes de exibir a mensagem e o buquê
+    </script>
+</body>
+</html>
+
+
+
+
